@@ -1,6 +1,5 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFranework;
-using DataAccess.Concrete.InMemory;
 using System;
 using System.Collections.Generic;
 using System.Linq;

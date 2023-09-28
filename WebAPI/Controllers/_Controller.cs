@@ -9,17 +9,17 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class _Controller : ControllerBase
     {
-        IProductService _productService;
-        public ProductsController(IProductService productService)
+        I_Service _Service;
+        public _Controller(I_Service Service)
         {
-                _productService = productService;
+                _Service = Service;
         }
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _productService.GetAll();
+            var result = _Service.GetAll();
             if (result.Success)
             {
                 return Ok(result);
@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {
-            var result = _productService.GetById(id);
+            var result = _Service.GetById(id);
             if (result.Success)
             {
                 return Ok(result);
@@ -46,7 +46,7 @@ namespace WebAPI.Controllers
         [HttpGet("getbycategory")]
         public IActionResult GetByCategoryId(int categoryId)
         {
-            var result = _productService.GetAllByCategory(categoryId);
+            var result = _Service.GetAllByCategory(categoryId);
             if (result.Success)
             {
                 return Ok(result);
@@ -57,9 +57,9 @@ namespace WebAPI.Controllers
             }
         }
         [HttpPost("add")]
-        public IActionResult Add(Product product)
+        public IActionResult Add(_ product)
         {
-            var result = _productService.Add(product);
+            var result = _Service.Add(product);
             if (result.Success)
             {
                 return Ok(result);

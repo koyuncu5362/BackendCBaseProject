@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DataAccess.Concrete.EntityFranework
 {
     //Connext = Relationship db with project Classes. 
-    public class NorthwindContext :DbContext
+    public class _Context :DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -19,10 +19,7 @@ namespace DataAccess.Concrete.EntityFranework
             //Host Db 
         }
 
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<_> _ { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }

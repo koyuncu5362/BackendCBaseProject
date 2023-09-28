@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IProductDal:IEntityRepository<Product>
+    public interface I_Dal:IEntityRepository<_>
     {
-        List<ProductDetailDto> GetProductDetails();
+        List<_Dto> Get_Details();
 
     }
 }
