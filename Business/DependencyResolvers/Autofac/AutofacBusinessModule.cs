@@ -20,6 +20,7 @@ namespace Business.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
+
             builder.RegisterType<_Manager>().As<I_Service>().SingleInstance();
             builder.RegisterType<Ef_Dal>().As<I_Dal>().SingleInstance();
 
